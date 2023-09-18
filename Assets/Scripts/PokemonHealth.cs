@@ -26,6 +26,7 @@ public class PokemonHealth : MonoBehaviour
         {
             Levelizer.numEnemies--;
             alive = false;
+
             gameObject.SetActive(false); // making it die
         }
     }

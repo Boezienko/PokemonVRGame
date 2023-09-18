@@ -6,7 +6,6 @@ using UnityEngine;
 public class PokemonDamage : MonoBehaviour
 {    
     private Vector3 pushBack = new Vector3(0f, 0.5f, 2f);
-    private Rigidbody rigidBody = null;
     public float damage = 25f;
 
     // Start is called before the first frame update
@@ -25,8 +24,10 @@ public class PokemonDamage : MonoBehaviour
     {
         if(collision.gameObject.TryGetComponent<PlayerHealth>(out PlayerHealth healthComponent))
         {
-            Vector3 velocity_change = pushBack - rigidBody.velocity;
-            rigidBody.AddForce(velocity_change, ForceMode.VelocityChange);
+            
+            collision.gameObject.GetComponent<PlayerHealth>().TakeDamage(damage);
+            Vector3 velocity_change = pushBack - collision.gameObject.GetComponent<Rigidbody>().velocity;
+            collision.gameObject.GetComponent<Rigidbody>().AddForce(velocity_change, ForceMode.VelocityChange);
 
         }
     }

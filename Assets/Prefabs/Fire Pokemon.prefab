@@ -443,6 +443,7 @@ GameObject:
   - component: {fileID: 3924305808266817980}
   - component: {fileID: 3924305808266817981}
   - component: {fileID: 8588843355170991130}
+  - component: {fileID: 8138948422256688517}
   m_Layer: 0
   m_Name: Fire Pokemon
   m_TagString: Untagged
@@ -459,7 +460,7 @@ Transform:
   m_GameObject: {fileID: 3924305808266817983}
   m_LocalRotation: {x: -0, y: -0.385556, z: -0, w: 0.92268443}
   m_LocalPosition: {x: -8.18, y: 0.5, z: -7.664}
-  m_LocalScale: {x: 5, y: 5, z: 5}
+  m_LocalScale: {x: 7, y: 7, z: 7}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 3924305807651341976}
@@ -503,7 +504,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3924305808266817983}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bf4d2cf4bf4e14d48a4a6c75ce3db697, type: 3}
   m_Name: 
@@ -518,12 +519,12 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3924305808266817983}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 082c3f8b71935c2468a296c7e6146e9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 660
+  speed: 60
   origin: {fileID: 3924305808266817982}
 --- !u!136 &3924305808266817976
 CapsuleCollider:
@@ -617,7 +618,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 25
-  rigidBody: {fileID: 0}
+--- !u!114 &8138948422256688517
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3924305808266817983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6ca0e903afd73444d86416472ecd2c57, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  speed: 1
+  origin: {fileID: 0}
 --- !u!1 &3924305808673548059
 GameObject:
   m_ObjectHideFlags: 0

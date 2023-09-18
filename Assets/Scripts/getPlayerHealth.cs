@@ -12,7 +12,7 @@ public class getPlayerHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        // accessing the players health variable from the PlayerHealth script
-        Text.SetText( PlayerHealth.playerHealth.ToString());
+        
     }
+
 }
