@@ -20,13 +20,13 @@ public class Levelizer : MonoBehaviour
     [Tooltip("The XR Rig")]
     public XROrigin xRRig = null;
 
-    static public int numEnemies;
+    static public int numEnemies =5;
     static public int level;
  
     // Start is called before the first frame update
     void Start()
     {
-        numEnemies = 0;
+        numEnemies = 5;
         level = 0;
         StartLevel();
     }
@@ -41,7 +41,7 @@ public class Levelizer : MonoBehaviour
             int z_offset = Random.Range(-5, 20);
             // it starts at the spawn point we made, this offset helps randomize where enemies spawn
             Vector3 offset = new Vector3(x_offset_multiplier*i,0,z_offset);
-            GameObject newObject = Instantiate(originalObject,spawnPoint.position + offset,spawnPoint.rotation);
+            GameObject newObject = Instantiate(originalObject,spawnPoint.position + offset,spawnPoint.rotation, this.transform);
             newObject.GetComponent<PokemonMovement>().target = xRRig.gameObject.transform; 
             
         }

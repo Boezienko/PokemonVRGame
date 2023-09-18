@@ -44,11 +44,11 @@ public class PokemonMovement : MonoBehaviour
     {
         // rotate to look at player
         transform.LookAt(target.position);
-        transform.Rotate(new Vector3(0, -90, 0)    , Space.Self);
+        transform.Rotate(new Vector3(0, 180, 0)    , Space.Self);
 
         if(Vector3.Distance(transform.position, target.position) > 0.5 )
         {
-            transform.Translate(new Vector3(speed * Time.deltaTime, 0, 0));
+            transform.Translate(new Vector3(0,0, -speed * Time.deltaTime));
         }
     }
     
