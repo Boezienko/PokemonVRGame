@@ -42,7 +42,7 @@ public class Levelizer : MonoBehaviour
             // it starts at the spawn point we made, this offset helps randomize where enemies spawn
             Vector3 offset = new Vector3(x_offset_multiplier*i,0,z_offset);
             GameObject newObject = Instantiate(originalObject,spawnPoint.position + offset,spawnPoint.rotation, this.transform);
-            newObject.GetComponent<PokemonMovement>().target = xRRig.gameObject.transform; 
+            newObject.GetComponent<PokemonMovement>().target = xRRig.gameObject.transform;  // initializing xrrig as target for pokemon to go to
             
         }
     }
